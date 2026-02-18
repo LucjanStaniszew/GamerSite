@@ -1,0 +1,12 @@
+Página de Videojuegos
+Home: Mis aficiones, ejemplos de videojuegos
+Mount & Blade
+Ratchet & Clank
+Galería
+Contacto
+
+
+
+REVISAR PARA CLASE 8
+1- Menú hamburguesa desde breakpoint desktop
+2- Cambiar Icons de bootstrap
