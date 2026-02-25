@@ -9,4 +9,7 @@ Contacto
 
 REVISAR PARA CLASE 8
 1- Menú hamburguesa desde breakpoint desktop
+Revisar Styles, index.html, pages y contacto al final (Ver diferencias)
+
 2- Cambiar Icons de bootstrap
+*****Revisar Link

@@ -19,6 +19,7 @@ Otro: #c237db
     padding: 0;
     box-sizing: border-box;
     font-family: Audiowide;
+    color: rgba(255, 255, 255, 0.55);
 }
 
 body{
@@ -41,10 +42,10 @@ header{
     width: 10vw;
 }
 
-.navbar-collapse{
+/* .navbar-collapse{
     flex-grow: 0;
     flex-basis: 0;
-}
+} */
 
 li{
     list-style: none;
