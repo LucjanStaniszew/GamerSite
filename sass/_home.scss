@@ -1,0 +1,92 @@
+@use "variables" as v;
+
+.home {
+    @include v.flex-box(column, wrap, center, center);
+    text-align: center;
+    
+    .games-home {
+        @include v.flex-box(column, wrap, center, center);
+        gap: 20px;
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .img-home {
+            @include v.flex-box(row, wrap, center, center);
+            gap: 25px;
+
+            .mb-imgs {
+                width: 25vw;
+                height: auto;
+                transition: 2s all ease-in-out;
+            } & :hover{
+                scale: 1.5;
+            }
+
+            .rc-imgs {
+                height: 40vh;
+                width: auto;
+                transition: 2s all ease-in-out;
+            } & :hover{
+                scale: 1.5;
+                object-fit: cover;
+            }
+        }
+
+        .btn-game {
+            text-decoration: none;
+            font-size: 1.25rem;
+            color: v.$neon-ciberpunk;
+            padding: 5px;
+            border-radius: 15px;
+            text-shadow:
+                0 0 5px v.$neon,
+                0 0 10px v.$neon,
+                0 0 20px v.$neon;
+            box-shadow:
+                0 0 5px v.$neon,
+                0 0 15px v.$neon;
+        }
+    }
+
+    @include v.tablet{
+        .games-home{
+            .img-home{
+                .rc-imgs, .mb-imgs{
+                    height: auto;
+                    width: 40vw;
+                }
+            }
+        }
+    }
+
+    @include v.mobile{
+        .games-home{
+            .img-home{
+                flex-direction: column;
+                
+                .rc-imgs, .mb-imgs{
+                    height: auto;
+                    width: 80vw;
+                }
+            }
+        }
+    }
+}
+
+
+// ANIMACIONES
+
+// @keyframes scaleUp {
+//     0%{
+//         scale: 1;
+//     }
+//     100%{
+//         scale: 1.5;
+//     }
+// }
+
+// @keyframes rubber {
+    
+// }

@@ -1,0 +1,56 @@
+@use "variables" as v;
+
+.cont{
+    display: flex;
+    justify-content: space-around;
+    height: 80vh;
+
+    iframe{
+        height: 60vh;
+        width: 30vw;
+    }
+    form{
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        div{
+            display: flex;
+            justify-content: space-around;
+            input{
+                border-radius: 5px;
+                padding: 5px;
+            }
+        }
+    }
+    @include v.tablet{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        iframe{
+            height: 40vh;
+        }
+        iframe, form{
+            width: 80vw;
+        }
+    }
+    @include v.mobile{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        iframe, form{
+            width: 80vw;
+        }
+        iframe{
+            height: 40vh;
+        }
+        form{
+            gap: 10px;
+        }
+    }
+}

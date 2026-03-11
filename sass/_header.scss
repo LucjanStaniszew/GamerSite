@@ -1,0 +1,44 @@
+@use "variables" as v;
+
+header{
+    background-image: url(../assets/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    .logo{
+        height: 8vh;
+        width: auto;
+    }
+    .titulo{
+        color: v.$neon-ciberpunk;
+        margin-right: 70px;
+    }
+    .nav-link{
+        color: v.$neon-ciberpunk;
+    }
+    .activo{
+        color: v.$neon;
+        font-weight: 900;
+    }
+    @include v.tablet{
+        .logo{
+            height: 10vh;
+            width: auto;
+        }
+        .titulo{
+            display: none;
+        }
+    }
+    @include v.mobile{
+        .logo{
+            height: 10vh;
+            width: auto;
+        }
+        .titulo{
+            display: none;
+        }
+    }
+}

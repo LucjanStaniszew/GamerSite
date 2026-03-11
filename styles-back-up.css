@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* Colores */
+/* 
+Clasico: #B026FF
+Eléctrico: #C77DFF
+Ciberpunk: #9D00FF
+Otro: #c237db
+*/
+
+:root{
+    --violeta-neon-ciberpunk: #9D00FF;
+    --violeta-neon: #c237db;
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Audiowide;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+body{
+    background-image: url(../assets/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Header */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo{
+    height: auto;
+    width: 10vw;
+}
+
+/* .navbar-collapse{
+    flex-grow: 0;
+    flex-basis: 0;
+} */
+
+li{
+    list-style: none;
+}
+
+.nav-links{
+    color: var(--violeta-neon-ciberpunk);
+    text-decoration: none;
+    border: 2px solid var(--violeta-neon);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.active{
+    font-weight: 900;
+}
+
+/* Footer */
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rslink{
+    display: flex;
+    gap: 20px;
+}
+
+.rs{
+    height: 5vh;
+    width: auto;
+}
+
+.wa{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+/* Home */
+
+.home{
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.games-home{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-game{
+    font-size: 1.25rem;
+    color: var(--violeta-neon-ciberpunk);
+    padding: 5px;
+    border-radius: 15px;
+    text-shadow:
+    0 0 5px var(--violeta-neon),
+    0 0 10px var(--violeta-neon),
+    0 0 20px var(--violeta-neon);
+    box-shadow:
+    0 0 5px var(--violeta-neon),
+    0 0 15px var(--violeta-neon);
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.img-home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-around;
+}
+
+.mb-imgs{
+    width: auto;
+    height: 25vh;
+}
+
+.rc-imgs{
+    height: 40vh;
+    width: auto;
+}
+
+/* Mount & Blade */
+
+img{
+    height: 25vh;
+}
+
+.img-car{
+    display: flex;
+    justify-content: center;
+}
+
+.carousel{
+    width: 75vw;
+}
+
+/* Ratchet & Clank */
+/* En donde van las img hay que armar carruseles con Bootstrap*/
+
+/* Galería */
+
+
+/* Contacto */
+
+
+/* Media Queris */
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 960px){
+    .navbar-collapse{
+    flex-grow: 1;
+    flex-basis: 100%;
+    }
+    .logo{
+        height: 10vh;
+        width: auto;
+    }
+    h1{
+        display: none;
+    }
+    footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .rc-imgs{
+        height: auto;
+        width: 40vw;
+    }
+}
+
+/* Mobile */
+@media (min-width: 300px) and (max-width: 479px){
+    .navbar-collapse{
+    flex-grow: 1;
+    flex-basis: 100%;
+    }
+    .logo{
+        height: 10vh;
+        width: auto;
+    }
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    h1{
+        display: none;
+    }
+    footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .rc-imgs{
+        height: auto;
+        width: 80vw;
+    }
+}

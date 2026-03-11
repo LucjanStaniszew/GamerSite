@@ -1,0 +1,18 @@
+@use "variables" as v;
+
+.mab-main{
+    text-align: center;
+    p{
+        padding: 0 10rem;
+    }
+    @include v.tablet{
+        p{
+            padding: 0 2rem;
+        }
+    }
+    @include v.mobile{
+        p{
+            padding: 0;
+        }
+    }
+}

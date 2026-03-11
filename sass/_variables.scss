@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+$neon-ciberpunk: #9D00FF;
+$neon: #c237db;
+$fuente: Audiowide;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuente;
+    color: $neon;
+}
+
+body{
+    background-image: url(../assets/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    main{
+        padding: 50px;
+    }
+}
+
+// MIXIN
+
+@mixin tablet{
+    @media (min-width: 480px) and (max-width: 960px){
+        @content;
+    }
+}
+
+@mixin mobile{
+    @media (min-width: 300px) and (max-width: 479px){
+        @content;
+    }
+}
+
+@mixin flex-box($dir, $wr, $jc, $ai){
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wr;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+// EXTEND
+
+%flexbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}

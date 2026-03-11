@@ -1,0 +1,47 @@
+@use "variables" as v;
+
+.rac-main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    p{
+        padding: 0 10rem;
+    }
+    .rac-gal{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        gap: 20px;
+        img{
+            width: 40vw;
+            height: auto;
+            border-radius: 100px;
+        }
+    }
+    @include v.tablet{
+        p{
+            padding: 0 2rem;
+        }
+        .rac-gal{
+            gap: 10px;
+            img{
+                border-radius: 50px;
+            }
+        }
+    }
+    @include v.mobile{
+        p{
+            padding: 0;
+        }
+        .rac-gal{
+            gap: 10px;
+            img{
+                width: 80vw;
+                border-radius: 25px;
+            }
+        }
+    }
+}

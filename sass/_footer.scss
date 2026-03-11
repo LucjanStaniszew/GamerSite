@@ -1,0 +1,67 @@
+@use "variables" as v;
+
+footer{
+    @include v.flex-box(row, nowrap, space-around, center);
+    .rslink{
+        display: flex;
+        gap: 20px;
+        li{
+            list-style: none;
+            .rs{
+                height: 5vh;
+                width: auto;
+            }
+            .wa{
+                position: fixed;
+                bottom: 50px;
+                right: 50px;
+                animation: vibrar 1s infinite ease;
+            } & :hover{
+                animation: none;
+            }
+        }
+    }
+    @include v.tablet{
+        flex-direction: column;
+        gap: 20px;
+    }
+    @include v.mobile{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+// ANIMACION
+
+@keyframes vibrar {
+    10%{
+        transform: translateY(10px)
+    }
+    20%{
+        transform: translateX(5px);
+    }
+    30%{
+        transform: translateX(-5px);
+    }
+    40%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(-5px);
+    }
+    60%{
+        transform: translateX(5px);
+    }
+    70%{
+        transform: translateX(-5px);
+    }
+    80%{
+        transform: translateX(5px);
+    }
+    90%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: rotateY(0);
+    }
+}
